@@ -4,14 +4,17 @@
 
 <beans>
 
-    <bean id="triangle" class="org.pratik.javabrains.Triangle" autowire="byName">
-        <!--<property name="points">-->
-            <!--<list>-->
-                <!--<ref bean="pt1"></ref>-->
-                <!--<ref bean="pt2"></ref>-->
-                <!--<ref bean="pt3"></ref>-->
-            <!--</list>-->
-        <!--</property>-->
+    <bean id="parentTriangle" class="org.pratik.javabrains.Triangle">
+        <property name="pt1" ref="p1"></property>
+    </bean>
+
+    <bean id="triangle1" class="org.pratik.javabrains.Triangle" parent="parentTriangle">
+        <property name="pt2" ref="p2"></property>
+        <property name="pt3" ref="p3"></property>
+    </bean>
+
+    <bean id="triangle2" class="org.pratik.javabrains.Triangle" parent="parentTriangle">
+        <property name="pt2" ref="p2"></property>
     </bean>
 
     <bean id="p1" class="org.pratik.javabrains.Point">
