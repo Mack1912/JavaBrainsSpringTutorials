@@ -8,7 +8,7 @@ public class DrawingApp {
 
         // its and interface that reads the blueprint of configuration from a xml file
         BeanFactory factory = new ClassPathXmlApplicationContext("spring.xml");
-        Triangle t = (Triangle) factory.getBean("triangle2");
+        Triangle t = (Triangle) factory.getBean("triangle1");
         t.draw();
     }
 
