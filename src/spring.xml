@@ -5,9 +5,13 @@
 <beans>
 
     <bean id="triangle" class="org.pratik.javabrains.Triangle">
-        <property name="p1" ref="pt1"></property>
-        <property name="p2" ref="pt2"></property>
-        <property name="p3" ref="pt3"></property>
+        <property name="points">
+            <list>
+                <ref bean="pt1"></ref>
+                <ref bean="pt2"></ref>
+                <ref bean="pt3"></ref>
+            </list>
+        </property>
     </bean>
 
     <bean id="pt1" class="org.pratik.javabrains.Point">
