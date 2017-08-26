@@ -4,19 +4,37 @@ import java.util.List;
 
 public class Triangle {
 
-    List<Point> points;
+    Point p1;
+    Point p2;
+    Point p3;
 
-    public List<Point> getPoints() {
-        return points;
+    public Point getP1() {
+        return p1;
     }
 
-    public void setPoints(List<Point> points) {
-        this.points = points;
+    public void setP1(Point p1) {
+        this.p1 = p1;
+    }
+
+    public Point getP2() {
+        return p2;
+    }
+
+    public void setP2(Point p2) {
+        this.p2 = p2;
+    }
+
+    public Point getP3() {
+        return p3;
+    }
+
+    public void setP3(Point p3) {
+        this.p3 = p3;
     }
 
     public void draw() {
-        for (Point p: points ) {
-            System.out.println(p);
-        }
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
     }
 }
